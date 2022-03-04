@@ -1,0 +1,85 @@
+h1{
+    text-align:center;
+    margin-bottom: 2rem;
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+}
+
+h1 span{
+    border-bottom-style:solid;
+    border-bottom-color: red;
+    padding-bottom: 10px;
+}
+
+h2{
+    font-size: 15px;
+}
+
+.wrap{
+    /*background-color: gray;*/
+    display: flex;
+    margin: auto;
+    width: 960px;
+    height: 300px;
+}
+
+.item{
+    width: 300px;
+    height:180px;
+    margin: 10px;
+    padding: 10px;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    display:block;
+    object-fit:cover;
+    border-radius: 0.375rem;
+}
+
+.textbox{
+    /*background-color: aqua; */
+    font-weight: bold;
+}
+
+.textboxLink{
+    text-decoration:none;
+}
+
+.textboxLink:visited{
+    color: black;
+}
+
+.textboxLink:hover{
+    color: red;
+}
+
+.author{
+    color: #8E8E8E	;
+    font-size: 8px;
+}
+
+.linkbox{
+    margin: auto;
+    background-color: red;
+    text-align:center;
+    line-height:40px;
+    width: 100px;
+    height: 40px;
+    border-radius: 0.375rem;
+
+}
+
+.linkbox:hover{
+    background-color: #AE0000;
+}
+
+.linkMore{
+    
+    text-decoration:none;
+    color: white;
+    border-radius: 10px;;
+}
+
+
