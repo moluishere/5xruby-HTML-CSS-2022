@@ -12,26 +12,63 @@
       height: 500px;
       background-color: aqua;
       display: flex;
-      flex-direction: row;
-      /*主軸方向：row 為由左至右  */
-      /* flex-direction: row-reverse; */
+      flex-direction: row; /*主軸方向 row 由左至右  */
+      /* flex-direction: row-reverse 由右至左 */
+
       /* writing-mode: vertical-lr; 橫書直書 */
+
+      justify-content: center;
+      /* justify-content 控制子項目的對齊與分布 */
+      flex-wrap: wrap; /*交叉軸：與主軸交叉的軸為交叉軸 -> 產生彈性列*/
+
+      align-content: center;
+      /*控制彈性列在交叉軸的對齊與分布*/
+
+      /* align-items: center; */
+      /*控制子物件在彈性列上的位置*/
     }
     .item {
-      width: 100px;
-      height: 100px;
+      width: 120px;
+      height: 120px; /*如果不設子層的高度，就會填滿父層的高度*/
       background-color: blue;
       color: aliceblue;
       font-size: 40px;
       margin: 4px;
     }
+    .item1 {
+      width: 120px;
+      height: 120px;
+      background-color: red;
+      color: aliceblue;
+      font-size: 40px;
+      margin: 4px;
+    }
+
+    .item:first-child,
+    .item:nth-child(5) {
+      height: 170px;
+    }
+
+    .item:nth-child(-n + 3) {
+      background-color: orange;
+    }
+
+    .i2 {
+      order: 2;
+    }
+
+    .i3 {
+      order: 1;
+    }
   </style>
   <body dir="ltr">
     <!-- ltr =left to right 代表由左至右 -->
     <div class="wrap">
-      <div class="item">1</div>
-      <div class="item">2</div>
-      <div class="item">3</div>
+      <div class="item i1">1中文</div>
+      <div class="item i2">2中文</div>
+      <div class="item i3">3中文</div>
+      <div class="item i4">4中文</div>
+      <div class="item i5">5中文</div>
     </div>
   </body>
 </html>

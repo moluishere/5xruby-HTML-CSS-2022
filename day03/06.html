@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .wrap {
+      width: 500px;
+      height: 500px;
+      background-color: aqua;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+    }
+    .item {
+      width: 100px;
+      height: 100px; /*被覆寫*/
+      background-color: blue;
+      color: aliceblue;
+      font-size: 20px;
+      margin: 4px;
+    }
+
+    /* flex-grow  子物件在"主軸"上做"剩餘空間"分配 */
+    .i1 {
+      flex-grow: 2;
+    }
+
+    .i2 {
+      flex-grow: 1;
+    }
+
+    .i3 {
+      flex-grow: 1;
+    }
+  </style>
+  <body>
+    <div class="wrap">
+      <div class="item i1">1中文</div>
+      <div class="item i3">2中文</div>
+      <div class="item i4">3中文</div>
+    </div>
+  </body>
+</html>

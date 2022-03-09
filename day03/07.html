@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .wrap {
+      width: 500px;
+      height: 500px;
+      background-color: aqua;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+    }
+    .item {
+      flex-grow: 1;
+      height: 200px;
+      width: 0;
+      margin: 5px;
+      background-color: blue;
+    }
+
+    /* flex-grow  子物件在"主軸"上做"剩餘空間"分配 */
+  </style>
+  <body>
+    <div class="wrap">
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+    </div>
+  </body>
+</html>

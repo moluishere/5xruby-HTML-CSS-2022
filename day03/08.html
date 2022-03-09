@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .wrap {
+      width: 500px;
+      height: 500px;
+      background-color: aqua;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+    }
+    .item {
+      width: 250px;
+      height: 100px; /*被覆寫*/
+      background-color: blue;
+      color: aliceblue;
+      font-size: 20px;
+      /* flex-shrink: 0; */
+    }
+
+    .i1 {
+      background-color: red;
+      flex-shrink: 1;
+    }
+
+    .i2 {
+      background-color: green;
+      flex-shrink: 1;
+    }
+
+    .i3 {
+      background-color: blue;
+      flex-shrink: 2;
+    }
+  </style>
+  <body>
+    <div class="wrap">
+      <div class="item i1">1中文</div>
+      <div class="item i2">2中文</div>
+      <div class="item i3">3中文</div>
+    </div>
+  </body>
+</html>
