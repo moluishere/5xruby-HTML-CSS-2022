@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .wrap {
+      width: 500px;
+      height: 500px;
+      background-color: aqua;
+      display: flex;
+      flex-direction: row;
+      /*主軸方向：row 為由左至右  */
+      /* flex-direction: row-reverse; */
+      /* writing-mode: vertical-lr; 橫書直書 */
+    }
+    .item {
+      width: 100px;
+      height: 100px;
+      background-color: blue;
+      color: aliceblue;
+      font-size: 40px;
+      margin: 4px;
+    }
+  </style>
+  <body dir="ltr">
+    <!-- ltr =left to right 代表由左至右 -->
+    <div class="wrap">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+    </div>
+  </body>
+</html>
