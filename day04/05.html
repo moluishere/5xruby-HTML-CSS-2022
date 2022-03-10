@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    /* 重點：邊框線是斜角連接 */
+
+    .arrow {
+      width: 0;
+      height: 0;
+      /* border-top: 30px solid black; */
+      border-right: 30px solid transparent;
+      border-left: 30px solid #0000;
+      border-bottom: 30px solid green;
+    }
+
+    .arrow2 {
+      width: 0;
+      height: 0;
+      border-top: 30px solid red;
+      border-right: 30px solid #0000;
+    }
+
+    .flag {
+      background-color: yellow;
+      font-size: 13px;
+      text-align: center;
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      position: relative;
+    }
+
+    .flag::after {
+      content: " ";
+      position: absolute;
+      width: 0px;
+      height: 0px;
+      border-left: 20px solid orange;
+      border-right: 20px solid orange;
+      border-bottom: 10px solid #0000;
+      top: 100%;
+      left: 0px;
+    }
+
+    .circle {
+      width: 450px;
+      height: 450px;
+      background-color: aqua;
+      margin: 30px;
+      border-radius: 50%;
+      overflow: hidden;
+      /* border-radius: 50%; 正圓形*/
+    }
+
+    .circle img {
+      width: 100%; /*寬高都要設定100%才有效*/
+      height: 100%;
+      object-fit: cover; /*讓寬高維持比例*/
+      object-position: center center; /*設定水平100 垂直100 圖片就會置中*/
+    }
+  </style>
+  <body>
+    <!-- 做三角形 -->
+    <!-- <div class="arrow"></div>
+    <div class="arrow2"></div> -->
+    <!-- 做旗子 -->
+    <!-- <div class="flag">38折</div> -->
+    <div class="circle">
+      <img src="https://picsum.photos/400/400/?random=10" />
+    </div>
+  </body>
+</html>
