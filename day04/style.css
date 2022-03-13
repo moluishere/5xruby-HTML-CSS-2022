@@ -1,0 +1,216 @@
+p {
+  font-size: 106.25%;
+}
+
+.main_header {
+  background-color: antiquewhite;
+}
+
+.main_header .containter {
+  display: flex;
+  align-items: center;
+  padding: 10px 100px;
+}
+
+.main_header .containter .logo {
+  width: 100px;
+}
+
+.main_header .containter .logo img {
+  width: 100%;
+}
+
+.main_header .containter .main_nav {
+  margin: 0px 30px;
+  flex-grow: 1; /*把剩餘空間都分配給  main_nav*/
+}
+
+.main_header .containter a {
+  text-decoration: none;
+  color: black;
+  padding: 5px 2px;
+}
+
+.customer .group,
+more_feature_service {
+  display: flex;
+  align-items: center;
+  background-color: aqua; /*測試用顏色*/
+  padding: 0px 120px;
+}
+
+.customer .group .items {
+  width: 50%;
+  padding: 100px;
+}
+
+.customer .group .items img {
+  width: 100%;
+}
+
+.intro_title {
+  text-align: center;
+  padding: 50px;
+}
+
+.intro_title h2 {
+  font-size: 218.75%;
+}
+
+.customer h1,
+h2,
+h3 {
+  font-size: 218.75%;
+}
+
+.customer .group .list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5px;
+}
+
+.list .list_items {
+  margin: 0px 5px;
+  padding: 5px;
+  width: 190px;
+}
+
+.btn a {
+  text-decoration: none;
+  color: black;
+  padding: 5px 2px;
+}
+
+.group.growp-reverse {
+  flex-direction: row-reverse;
+  background-color: greenyellow; /*測試用顏色*/
+}
+
+.more_feature_service .group {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  background-color: aliceblue; /*測試用顏色*/
+}
+
+.more_feature_service .group .items {
+  width: 300px;
+  margin: 5px;
+  padding: 0 50px;
+  margin: auto;
+}
+
+.more_feature_service .group .items .circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: auto;
+}
+
+.circle img {
+  width: 100%; /*寬高都要設定100%才有效*/
+  height: 100%;
+  object-fit: cover; /*讓寬高維持比例*/
+  object-position: center center; /*設定水平100 垂直100 圖片就會置中*/
+}
+
+.more_feature_service {
+  background-color: aquamarine;
+  padding: 0px 0px 50px 0px;
+}
+
+.more_feature_service h2 {
+  margin: 0;
+  height: 150px;
+  line-height: 150px;
+  text-align: center;
+}
+
+.more_feature_service h3 {
+  margin: 10px;
+  font-weight: normal;
+  font-size: 20px;
+}
+
+.more_feature_service p {
+  margin: 5px;
+  font-size: 12px;
+}
+
+.showcase {
+  background-color: rgb(129, 129, 236);
+}
+
+.showcase h2 {
+  height: 150px;
+  line-height: 150px;
+  text-align: center;
+}
+
+.showcase_wrap {
+  display: flex;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.showcase_items {
+  margin: 10px;
+  margin: auto;
+  width: 200px;
+  height: 100px;
+}
+
+.showcase_items img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.showcase_content_wrap {
+  display: flex;
+  max-width: 1200px;
+  margin: auto;
+  padding: 50px 0px;
+}
+
+.showcase_content_items {
+  max-width: 1200px;
+  margin: auto;
+  width: 500px;
+}
+
+.showcase_content_items img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.footer {
+  max-width: 1200px;
+}
+
+.footer_content {
+  padding: 100px;
+  color: aliceblue;
+  background-color: rgb(41, 41, 77);
+  text-decoration: none;
+}
+
+.footer_content_link {
+  background-color: blue;
+  text-align: center;
+  line-height: 40px; /*設定成和div的高度一樣，當div區塊的高度等同於文字行高的，文字就會被放在中間*/
+  width: 200px;
+  height: 40px; /*div高度*/
+  border-radius: 0.375rem;
+}
+
+.footer_content_link a {
+  text-decoration: none;
+  color: aliceblue;
+}
