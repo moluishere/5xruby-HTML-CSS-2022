@@ -29,6 +29,10 @@ p {
 
 .main_header {
   background-color: rgb(255, 255, 255);
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
 }
 
 .main_header .containter {
@@ -173,6 +177,7 @@ h3 {
   width: 150px;
   height: 150px;
   border-radius: 50%;
+  box-shadow: 0 0 12px black;
   overflow: hidden;
   margin: auto;
 }
