@@ -39,6 +39,7 @@ p {
   display: flex;
   align-items: center;
   height: 70px;
+
   padding: 10px 100px;
 }
 
@@ -134,9 +135,9 @@ h3 {
 }
 
 .list .list_items {
-  margin: 0px 5px;
-  padding: 5px;
-  width: 190px;
+  line-height: 2;
+  padding: 0 5px;
+  width: 280px;
 }
 
 .customer .group .items .btn a {
