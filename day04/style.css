@@ -2,6 +2,10 @@ p {
   font-size: 106.25%;
 }
 
+img {
+  display: inline-block; /*去除圖片底下的空白區域*/
+}
+
 .top_header_containter {
   background-color: rgb(0, 20, 45);
   color: rgb(255, 255, 255);
@@ -38,8 +42,6 @@ p {
 .main_header .containter {
   display: flex;
   align-items: center;
-  height: 70px;
-
   padding: 10px 100px;
 }
 
@@ -59,7 +61,9 @@ p {
 .main_header .main_nav a {
   text-decoration: none;
   color: black;
-  padding: 5px 10px;
+  display: inline-block;
+  /*超連結為inline物件，記得設定為inline-block，才能設定寬高*/
+  padding: 5px 10px; /*此時寬高才有用*/
 }
 
 .containter .nav_button {
@@ -138,6 +142,7 @@ h3 {
   line-height: 2;
   padding: 0 5px;
   width: 280px;
+  margin-left: 18px;
 }
 
 .customer .group .items .btn a {
@@ -166,8 +171,7 @@ h3 {
 
 .more_feature_service .group .items {
   width: 300px;
-  padding: 0 50px;
-  margin: auto;
+  padding: 15px 50px;
 }
 
 .more_feature_service .group .items h3 {
@@ -257,7 +261,6 @@ h3 {
 
 .showcase_content_items img {
   width: 100%;
-  height: 200px;
   object-fit: cover;
   object-position: center center;
 }
@@ -337,7 +340,7 @@ button {
 }
 
 .horizon {
-  width: 960px;
+  width: 1080px;
   height: 0.5px;
   border: none;
   background-color: rgb(20, 40, 73);
