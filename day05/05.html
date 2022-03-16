@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 200px;
+        height: 200px;
+        margin: 10px;
+        background-color: blue;
+        font-size: 50px;
+      }
+
+      .box1:hover {
+        background-color: brown;
+        transform: scale(2); /*物件面積乘積*/
+      }
+
+      .card {
+        width: 300px;
+        border: 1px solid black;
+      }
+
+      .pic {
+        overflow: hidden;
+      }
+
+      .pic img {
+        display: inline-block;
+        transform: scale(1);
+        transition: 3s;
+      }
+
+      .card:hover img {
+        transform: scale(2);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <div class="box box1">box</div>
+    <div class="box">box1</div> -->
+    <div class="card">
+      <div class="pic">
+        <img src="https://picsum.photos/300/200/?random=10" />
+      </div>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni obcaecati
+        laboriosam nisi! Est porro, deserunt neque minus esse numquam
+        reprehenderit culpa! Quis culpa, sapiente ipsa dolore deserunt earum
+        sequi id!
+      </p>
+    </div>
+  </body>
+</html>

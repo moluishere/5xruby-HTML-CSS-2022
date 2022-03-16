@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        color: white;
+      }
+      .menu_items a {
+        text-decoration: none;
+      }
+
+      .menu_items {
+        display: inline-block; /*將a標籤設定成inline-block物件，才能設定寬高*/
+        position: relative; /*設定定位屬性，做為下拉選單的父層*/
+        padding: 20px;
+        font-size: 30px;
+        margin: auto;
+      }
+      .dropdown_menu {
+        background-color: rgb(18, 82, 82);
+        display: flex;
+      }
+
+      .menu_items_list {
+        background-color: rgb(89, 89, 163);
+        display: block;
+        width: 300px;
+        padding: 10px;
+        position: absolute; /*設定為絕對定位，從資料中抽離，並以menu_items為父層定位*/
+        left: 0;
+        top: 100%;
+        border-radius: 0 0 20px 20px;
+        display: none;
+      }
+
+      .menu_items_list a {
+        display: block;
+        padding: 10px;
+      }
+
+      .menu_items:hover .menu_items_list {
+        display: block;
+      }
+
+      .menu_btn {
+        position: relative; /*相對定位*/
+        display: inline-block;
+        text-align: center;
+      }
+      .menu_btn::after {
+        position: absolute; /*絕對定位*/
+        content: " ";
+        width: 0px;
+        height: 5px;
+        background: orange;
+        top: 50px; /*注意header btn 的高度*/
+        left: 0;
+        z-index: 1;
+        transition: width 1s;
+      }
+
+      .menu_items:hover:hover .menu_btn::after {
+        display: block;
+        width: 120px;
+        transition: width 1s;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="nav">
+      <ul class="dropdown_menu">
+        <li class="menu_items">
+          <a class="menu_btn" href="#">來點我啊</a>
+          <ul class="menu_items_list">
+            <li><a href="#">再點啊</a></li>
+            <li><a href="#">還點啊</a></li>
+            <li><a href="#">你為什麼要點</a></li>
+            <li><a href="#">點夠沒</a></li>
+            <li><a href="#">別點了</a></li>
+          </ul>
+        </li>
+        <li class="menu_items"><a href="#">不要點我</a></li>
+        <li class="menu_items"><a href="#">不要點我</a></li>
+        <li class="menu_items"><a href="#">不要點我</a></li>
+        <li class="menu_items"><a href="#">不要點我</a></li>
+        <li class="menu_items"><a href="#">不要點我</a></li>
+      </ul>
+    </header>
+  </body>
+</html>
