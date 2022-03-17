@@ -11,7 +11,6 @@ img {
   color: rgb(255, 255, 255);
   display: flex;
   justify-content: flex-end;
-  min-height: 40px;
   align-items: center;
 }
 
@@ -161,7 +160,6 @@ h3 {
 }
 
 .more_feature_service .group {
-  max-width: 1200px;
   margin: auto;
   display: flex;
   justify-content: center;
@@ -228,7 +226,6 @@ h3 {
 
 .showcase_wrap {
   display: flex;
-  max-width: 1200px;
   margin: auto;
 }
 
@@ -248,13 +245,12 @@ h3 {
 
 .showcase_content_wrap {
   display: flex;
-  max-width: 1200px;
+
   margin: auto;
   padding: 50px 0px;
 }
 
 .showcase_content_items {
-  max-width: 1200px;
   margin: auto;
   width: 500px;
 }

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      .item {
+        margin: 15px;
+        padding: 10px;
+        border: 1px solid red;
+        box-sizing: border-box;
+      }
+
+      .item img {
+        width: 100%;
+        display: block;
+      }
+
+      @media screen and (min-width: 768px) {
+        .item {
+          display: flex;
+          width: 720px;
+          flex-wrap: wrap;
+        }
+
+        .item .pic {
+          width: 47.85100287%;
+          background-color: aqua;
+        }
+
+        .item .txt {
+          width: 47.85100287%;
+          margin-left: 4.29799427%;
+          background-color: aqua;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="item">
+      <div class="pic">
+        <img src="https://picsum.photos/300/200/?random=10" />
+      </div>
+      <div class="txt">
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident
+          necessitatibus laborum cum, aliquam ipsa, at libero nihil quas
+          similique error temporibus debitis amet laboriosam magni dolorum, eos
+          doloribus odit ea.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

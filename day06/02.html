@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .items {
+        margin: 15px;
+        padding: 10px;
+        border: 1px solid red;
+        box-sizing: border-box; /*width=content+padding+border*/
+      }
+
+      .items img {
+        width: 100%;
+        display: block;
+      }
+      /*當裝置是螢幕且寬度大於1024px的時候，就符合條件*/
+      @media screen and (min-width: 768px) {
+        /*斷點 */
+        .wrap {
+          display: flex;
+          width: 720px;
+          margin: auto;
+        }
+
+        .items {
+          width: 210px; /* 720/3 - 30 = 210*/
+        }
+      }
+
+      @media screen and (min-width: 992px) {
+        /*現在ipad 是 1024px*/
+        /*斷點 */
+        .wrap {
+          width: 960px;
+        }
+        .items {
+          width: 290px; /*960/3 - 30 = 290*/
+        }
+      }
+
+      @media screen and (min-width: 1200px) {
+        .wrap {
+          width: 1200px;
+        }
+        .items {
+          width: 370px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="items">
+        <img src="https://picsum.photos/300/200/?random=10" />
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
+          inventore obcaecati incidunt quos saepe quibusdam quae neque alias,
+          expedita tenetur quam quo ratione amet dignissimos tempore delectus
+          quas architecto recusandae?
+        </p>
+      </div>
+      <div class="items">
+        <img src="https://picsum.photos/300/200/?random=10" />
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
+          inventore obcaecati incidunt quos saepe quibusdam quae neque alias,
+          expedita tenetur quam quo ratione amet dignissimos tempore delectus
+          quas architecto recusandae?
+        </p>
+      </div>
+      <div class="items">
+        <img src="https://picsum.photos/300/200/?random=10" />
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
+          inventore obcaecati incidunt quos saepe quibusdam quae neque alias,
+          expedita tenetur quam quo ratione amet dignissimos tempore delectus
+          quas architecto recusandae?
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

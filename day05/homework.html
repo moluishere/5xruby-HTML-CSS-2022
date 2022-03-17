@@ -11,17 +11,20 @@
         padding: 0;
         list-style: none;
         color: white;
-      }
-      .menu_items a {
         text-decoration: none;
+      }
+      .menu_items > a {
+        display: ;
+        background-color: red;
+        padding: 10px;
       }
 
       .menu_items {
         display: inline-block; /*將a標籤設定成inline-block物件，才能設定寬高*/
-        position: relative; /*設定定位屬性，做為下拉選單的父層*/
         padding: 20px;
-        font-size: 30px;
-        margin: auto;
+        font-size: 25px;
+        display: inline-block;
+        /* margin: auto; */
       }
       .dropdown_menu {
         background-color: rgb(18, 82, 82);
@@ -29,20 +32,18 @@
       }
 
       .menu_items_list {
-        background-color: rgb(89, 89, 163);
         display: block;
         width: 300px;
-        padding: 10px;
+        padding-top: 40px;
+        /* border: 2px solid red; 測試用邊框線 */
         position: absolute; /*設定為絕對定位，從資料中抽離，並以menu_items為父層定位*/
-        left: 0;
-        top: 100%;
-        border-radius: 0 0 20px 20px;
         display: none;
       }
 
       .menu_items_list a {
         display: block;
-        padding: 10px;
+        padding: 20px;
+        background-color: rgb(94, 132, 212);
       }
 
       .menu_items:hover .menu_items_list {
@@ -51,29 +52,28 @@
 
       .menu_btn {
         position: relative; /*相對定位*/
-        display: inline-block;
-        text-align: center;
       }
       .menu_btn::after {
         position: absolute; /*絕對定位*/
         content: " ";
-        width: 0px;
+        width: 100%;
         height: 5px;
         background: orange;
-        top: 50px; /*注意header btn 的高度*/
+        bottom: 0;
         left: 0;
-        z-index: 1;
-        transition: width 1s;
+        /* transform-origin: right center; */
+        transform: scaleX(0);
+        transition: 1s;
       }
 
       .menu_items:hover .menu_btn::after {
-        width: 120px;
-        transition: width 1s;
+        transform: scaleX(1);
+        transition: 1s;
       }
     </style>
   </head>
   <body>
-    <header class="nav">
+    <nav>
       <ul class="dropdown_menu">
         <li class="menu_items">
           <a class="menu_btn" href="#">來點我啊</a>
@@ -85,12 +85,12 @@
             <li><a href="#">別點了</a></li>
           </ul>
         </li>
-        <li class="menu_items"><a href="#">不要點我</a></li>
-        <li class="menu_items"><a href="#">不要點我</a></li>
-        <li class="menu_items"><a href="#">不要點我</a></li>
-        <li class="menu_items"><a href="#">不要點我</a></li>
-        <li class="menu_items"><a href="#">不要點我</a></li>
+        <li class="menu_items"><a class="menu_btn" href="#">不要點我</a></li>
+        <li class="menu_items"><a class="menu_btn" href="#">不要點我</a></li>
+        <li class="menu_items"><a class="menu_btn" href="#">不要點我</a></li>
+        <li class="menu_items"><a class="menu_btn" href="#">不要點我</a></li>
+        <li class="menu_items"><a class="menu_btn" href="#">不要點我</a></li>
       </ul>
-    </header>
+    </nav>
   </body>
 </html>
