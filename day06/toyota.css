@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  box-sizing: border-box;
+}
+
+.wrap {
+  position: relative;
+  width: 960px;
+  height: 800px;
+  /* border: 5px solid rebeccapurple; */
+  background-color: aqua;
+  margin: auto;
+}
+
+.title {
+  position: relative;
+  width: 355px;
+  /* height: 400px; */
+  background-color: black;
+  color: aliceblue;
+  z-index: 2;
+}
+
+.tittle_feature {
+  padding: 0 10px;
+  width: 355px;
+  /* height: 100px; */
+  background-color: brown;
+}
+.tittle_feature h2 {
+  color: aliceblue;
+  line-height: 100px;
+  font-size: 60px;
+}
+
+.title p {
+  padding: 15px;
+  font-size: 22px;
+}
+
+.title p span {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.background {
+  position: relative;
+  width: 440px;
+  height: 290px;
+  background-color: rgb(238, 238, 238);
+  margin-top: -400px;
+  margin-left: 520px;
+  z-index: 0;
+}
+
+.pic {
+  position: absolute;
+  width: 695px;
+  height: 430px;
+  margin: auto;
+  top: 100px;
+  right: 100px;
+  z-index: 1;
+}
+
+.img {
+  width: 100%;
+  overflow: hidden;
+  object-fit: cover;
+}
+
+.youtube_icon {
+  position: relative;
+  /* border: 5px solid green; */
+  width: 80px;
+  height: 50px;
+  top: -50px;
+  left: 800px;
+  z-index: 4;
+}
+
+.youtube_icon::after {
+  content: "";
+  position: absolute;
+  border-top: 25px solid red;
+  border-left: 40px solid white;
+  border-bottom: 25px solid red;
+  border-right: 40px solid red;
+  border-radius: 5px;
+}
+
+.content {
+  position: absolute;
+  width: 682px;
+  height: 275px;
+  background-color: rgb(238, 238, 238);
+  bottom: 0px;
+  left: 100px;
+  z-index: 3;
+  padding: 10px;
+}
+
+.content h2 {
+  color: brown;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.content h2::after {
+  content: "";
+  display: inline-block;
+  flex-grow: 1;
+  height: 2px;
+  background: brown;
+  margin-left: 10px;
+}
+
+.text h3 {
+  display: inline-block;
+  background-color: black;
+  color: aliceblue;
+  font-size: 20px;
+}
+
+.text p {
+  font-size: 18px;
+  text-indent: -1em;
+  padding: 0 0 0 2em;
+}
