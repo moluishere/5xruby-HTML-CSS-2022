@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      header {
+        background-color: #ccc;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 10px;
+        position: relative;
+      }
+      .logo {
+        width: 80px;
+        height: 40px;
+      }
+      .hb {
+        width: 40px;
+        height: 40px;
+        background-color: #f00;
+      }
+      #menu-switch {
+        display: none;
+      }
+
+      @media screen and (max-width: 767px) {
+        /*手機版*/
+        #menu-switch:checked ~ header nav {
+          display: block;
+        }
+        .hb {
+          position: relative;
+        }
+        #menu-switch:checked ~ header .hb {
+          background-color: #000;
+        }
+        .hb span {
+          width: 36px;
+          height: 4px;
+          background-color: #fff;
+          position: absolute;
+          left: 2px;
+        }
+        .hb span:nth-child(1) {
+          top: 8px;
+          transform: rotate(0deg);
+          transition: top 0.5s 0.5s, transform 0.5s 0s;
+        }
+        #menu-switch:checked ~ header .hb span:nth-child(1) {
+          top: 18px;
+          transform: rotate(45deg);
+          transition: top 0.5s 0.3s, transform 0.5s 0.8s;
+        }
+        .hb span:nth-child(2) {
+          top: 0;
+          bottom: 0;
+          margin: auto;
+          opacity: 1;
+          transition: 0.3s;
+        }
+        #menu-switch:checked ~ header .hb span:nth-child(2) {
+          opacity: 0;
+        }
+        .hb span:nth-child(3) {
+          bottom: 8px;
+          transform: rotate(0deg);
+          transition: bottom 0.5s 0.5s, transform 0.5s 0s;
+        }
+        #menu-switch:checked ~ header .hb span:nth-child(3) {
+          bottom: 18px;
+          transform: rotate(-45deg);
+          transition: bottom 0.5s 0.3s, transform 0.5s 0.8s;
+        }
+        nav {
+          width: 100%;
+          box-sizing: border-box;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          background-color: #fa0;
+          display: none;
+        }
+        nav a {
+          display: block;
+        }
+      }
+      @media screen and (min-width: 768px) {
+        .hb {
+          display: none;
+        }
+
+        nav a {
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <input type="checkbox" name="" id="menu-switch" />
+    <header>
+      <div class="logo">
+        <img src="https://fakeimg.pl/80x40/200" />
+      </div>
+
+      <label for="menu-switch" class="hb">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
+      <nav>
+        <a href="#">link</a>
+        <a href="#">link</a>
+        <a href="#">link</a>
+        <a href="#">link</a>
+      </nav>
+    </header>
+
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis
+      perferendis accusamus in iste officiis quis. Repudiandae, atque. Corrupti
+      exercitationem iste iure rem incidunt nobis laboriosam consequatur quis?
+      Commodi, cupiditate consequatur?
+    </p>
+    <p>
+      Et aut nostrum laboriosam dolor veritatis rerum adipisci provident quae
+      suscipit incidunt reiciendis iste at blanditiis repellendus, quod nobis
+      officia libero quibusdam eius nihil nisi accusamus pariatur rem.
+      Cupiditate, aliquam?
+    </p>
+    <p>
+      Nam repellat similique suscipit quis minus tenetur asperiores laborum
+      consequuntur voluptatem sequi, corrupti veritatis itaque quibusdam
+      reprehenderit! Esse consequatur perferendis ab modi! Deserunt ipsa dolorem
+      saepe doloremque earum fugit iure.
+    </p>
+    <p>
+      Nihil quod mollitia aliquid! Corporis facilis id illum quae, earum eaque
+      nobis perspiciatis blanditiis dicta qui quod porro neque, praesentium
+      impedit explicabo exercitationem optio harum vel doloribus nam itaque
+      quisquam.
+    </p>
+    <p>
+      Tenetur odio obcaecati labore alias laboriosam debitis. Saepe quibusdam
+      provident excepturi adipisci recusandae eveniet reprehenderit eos nesciunt
+      reiciendis culpa, maiores dolore ipsum minima. Culpa mollitia id dolores
+      exercitationem, ipsam dolorum!
+    </p>
+    <p>
+      At magni, maxime odio saepe eveniet veniam quis minima dolorem a, ipsa
+      laudantium nesciunt commodi adipisci tempora dignissimos voluptatem
+      dolores? Dolorum dignissimos debitis atque excepturi quos aut obcaecati
+      eum consequuntur!
+    </p>
+    <p>
+      Facere reiciendis nihil quae quisquam impedit aliquid molestiae quibusdam
+      porro corporis quis ipsa minus autem rerum, beatae assumenda perspiciatis
+      mollitia distinctio a ex! Architecto incidunt sint at ex ratione ducimus!
+    </p>
+    <p>
+      Vel obcaecati officia explicabo. Pariatur dolor vel temporibus optio ea
+      voluptatibus officiis veniam illum odio voluptas itaque voluptate facere
+      numquam mollitia nemo recusandae, voluptatum, dolore vero fuga? Vel,
+      itaque accusamus.
+    </p>
+    <p>
+      Non sequi sunt enim quae quibusdam error officiis id quia. Tenetur,
+      eligendi beatae. Veniam vitae sapiente ex consequatur? Provident
+      repellendus animi nesciunt officiis blanditiis omnis iste similique totam
+      sunt perspiciatis.
+    </p>
+    <p>
+      Recusandae, accusantium. Et, magni aliquid quod ducimus laudantium
+      adipisci culpa odio aperiam veritatis. Minus non accusamus, temporibus
+      quia libero natus odit. Provident temporibus aperiam ex similique? Fugiat
+      accusamus minima distinctio?
+    </p>
+  </body>
+</html>

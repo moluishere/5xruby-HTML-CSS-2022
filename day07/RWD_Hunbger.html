@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>金魚影片_RWD影片練習</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    #menu_control {
+      position: absolute;
+      z-index: -2;
+      opacity: 0; /*使用 z-index 負值與opacity: 0;確保 menu_control 的input框框看不見*/
+    }
+    .header {
+      height: 50px;
+      background-color: gray;
+      position: relative;
+    }
+
+    .logo {
+      width: 60px;
+      height: 40px;
+      margin-left: 10px;
+    }
+
+    .logo #{
+      display: block;
+      height: 40px;
+    }
+    .logo img {
+      display: inline-block;
+    }
+    .menu_btn {
+      width: 40px;
+      height: 40px;
+      background-color: black;
+      display: block;
+      position: absolute;
+      top: 5px;
+      right: 10px;
+    }
+
+    .menu_btn span {
+      opacity: 0;
+      width: 1px;
+      height: 1px;
+      display: block;
+      overflow: hidden;
+    }
+    .menu_btn::before {
+      content: "";
+      position: absolute;
+      height: 2px;
+      left: 2px;
+      width: 36px;
+      background-color: #aaa;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      box-shadow: 0px 8px 0 #aaa, 0px -8px 0 #aaa;
+      /*X軸 Y軸 模糊 顏色*/
+    }
+
+    nav {
+      /*手機*/
+      width: 80%;
+      height: calc(100vh - 50px);
+      /*使用計算機計算100vh-header高度*/
+      /*100vh: viewport height 視窗高*/
+      background-color: #282923;
+      position: absolute;
+      top: 50px;
+      left: -100%; /*先把選單放到邊邊藏起來*/
+      transition: 0.5s;
+    }
+    nav a {
+      display: block;
+      text-decoration: none;
+      color: green;
+      padding: 10px 20px;
+      border-bottom: 1px solid green;
+    }
+
+    #menu_control:checked ~ .header nav {
+      left: 0; /*選到menu_control後把選單移回來*/
+    }
+
+    @media screen and (min-width: 768px) {
+      .menu_btn {
+        display: none;
+      }
+      .header {
+        display: flex;
+        justify-content: space-between;
+        background-color: #282923;
+        align-items: center;
+      }
+
+      nav {
+        position: relative;
+        display: flex;
+        left: 0;
+        width: auto;
+        height: auto;
+        top: 0;
+        background-color: transparent; /*透明*/
+      }
+
+      nav a {
+        border-bottom: none;
+      }
+    }
+  </style>
+  <body>
+    <input type="checkbox" name="" id="menu_control" />
+    <div class="header">
+      <h1 class="logo">
+        <a href="#"><img src="https://picsum.photos/60/40/?random=10" /></a>
+      </h1>
+      <label for="menu_control" class="menu_btn">
+        <span>選單</span>
+      </label>
+      <nav>
+        <a href="#">link</a>
+        <a href="#">link</a>
+        <a href="#">link</a>
+        <a href="#">link</a>
+        <a href="#">link</a>
+        <a href="#">link</a>
+      </nav>
+    </div>
+  </body>
+</html>
