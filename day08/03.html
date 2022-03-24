@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>關鍵影格動畫</title>
+    <style>
+      @keyframes amos {
+        0% {
+          left: 0;
+          border-color: red;
+        }
+        100% {
+          left: 300px;
+          background-color: green;
+        }
+      }
+
+      .box {
+        width: 200px;
+        height: 200px;
+        background-color: gray;
+        position: relative;
+
+        animation-name: amos; /*動畫名稱*/
+        animation-duration: 1s; /*播放時間*/
+        animation-delay: 2s; /* 延遲執行的時間 */
+        animation-timing-function: linear; /*速度 linear為均速*/
+        animation-iteration-count: 1; /*執行次數 infinite為不間斷 */
+        animation-direction: alternate; /*動畫方向*/
+        animation-fill-mode: forwards; /*forwards 讓動畫停在動畫結束的當下*/
+        /* fill-mode 填充模式 : backwards  both*/
+        /* animation-play-state:running; 播放狀態 */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+  </body>
+</html>

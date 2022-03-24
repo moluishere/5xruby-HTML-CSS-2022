@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>link 的四種狀態</title>
+  </head>
+  <style>
+    /*未連結過狀態*/
+    a:link {
+      display: inline-block;
+      padding: 10px 20px;
+      text-decoration: none;
+      color: aliceblue;
+      background-color: gray;
+    }
+    /* 已連結過 */
+    a:visited {
+      color: aliceblue;
+      background-color: black;
+    }
+
+    /* focus 狀態的樣式，使用 tab 鍵 */
+    a:focus {
+      background-color: green;
+    }
+    /* 滑鼠摸到連結 */
+    a:hover {
+      background-color: red;
+    }
+
+    /* 點擊連結 */
+    a:active {
+      color: yellow;
+    }
+  </style>
+  <body>
+    <a>a</a>
+    <a href="#">我是連結</a>
+  </body>
+</html>

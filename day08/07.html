@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>last-child & last-of-type</title>
+    <style>
+      /* .group .A:first-child {
+        color: red;
+      }  選不到!*/
+
+      .group :first-child {
+        color: red;
+      }
+      /* 選到了! */
+
+      .group div:first-of-type {
+        background: red;
+      }
+      /* 選到了! */
+    </style>
+  </head>
+  <body>
+    <div class="group">
+      <h1>Amos 金魚腦</h1>
+      <div class="A">A</div>
+      <span class="B">B</span>
+      <div class="A">A</div>
+      <span class="B">B</span>
+    </div>
+  </body>
+</html>
